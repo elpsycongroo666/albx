@@ -6,5 +6,6 @@ const pageController = require('./controllers/pageController');
 router
     .get('/', pageController.getIndexPage)
     .get('/detail',pageController.getDetailPage)
+    .get('/list',pageController.getLIstPage)
 // 暴露
 module.exports = router;

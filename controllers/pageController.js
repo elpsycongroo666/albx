@@ -8,6 +8,9 @@ function getDetailPage(req,res){
     res.render('detail.ejs');
 }
 
+function getLIstPage(req,res){
+    res.render('list.ejs');
+}
 // 获取后台的页面
 
 
@@ -17,5 +20,5 @@ function getDetailPage(req,res){
 
 // 暴露
 module.exports = {
-    getIndexPage,getDetailPage
+    getIndexPage,getDetailPage,getLIstPage
 }
