@@ -11,7 +11,12 @@ function getDetailPage(req,res){
 function getLIstPage(req,res){
     res.render('list.ejs');
 }
+
+
 // 获取后台的页面
+function getAdminCategoriesPage(req, res) {
+    res.render('admin/categories.ejs');
+}
 
 
 
@@ -20,5 +25,6 @@ function getLIstPage(req,res){
 
 // 暴露
 module.exports = {
-    getIndexPage,getDetailPage,getLIstPage
+    getIndexPage,getDetailPage,getLIstPage,
+    getAdminCategoriesPage
 }
