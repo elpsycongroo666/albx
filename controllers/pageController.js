@@ -18,7 +18,25 @@ function getAdminCategoriesPage(req, res) {
     res.render('admin/categories.ejs');
 }
 
+function getAdminCommentsPage(req, res) {
+    res.render('admin/comments.ejs');
+}
 
+function getAdminIndexPage(req, res) {
+    res.render('admin/index.ejs');
+}
+
+function getAdminLoginPage(req, res) {
+    res.render('admin/login.ejs');
+}
+
+function getAdminNavMenusPage(req, res) {
+    res.render('admin/nav-menus.ejs');
+}
+
+function getAdminPassworDresetPage(req, res) {
+    res.render('admin/password-reset.ejs');
+}
 
 
 
@@ -26,5 +44,6 @@ function getAdminCategoriesPage(req, res) {
 // 暴露
 module.exports = {
     getIndexPage,getDetailPage,getLIstPage,
-    getAdminCategoriesPage
+    getAdminCategoriesPage,getAdminCommentsPage,getAdminIndexPage,getAdminLoginPage,getAdminNavMenusPage,getAdminPassworDresetPage,
+    
 }

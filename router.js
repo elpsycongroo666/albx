@@ -10,5 +10,10 @@ router
     .get('/list', pageController.getLIstPage)
     // 后台页面请求
     .get('/admin/categories', pageController.getAdminCategoriesPage)
+    .get('/admin/comments',pageController.getAdminCommentsPage)
+    .get('/admin/index',pageController.getAdminIndexPage)
+    .get('/admin/login', pageController.getAdminLoginPage)
+    .get('/admin/navMenus',pageController.getAdminNavMenusPage)
+    .get('/admin/passworDreset',pageController.getAdminPassworDresetPage)
 // 暴露
 module.exports = router;
