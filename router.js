@@ -15,5 +15,11 @@ router
     .get('/admin/login', pageController.getAdminLoginPage)
     .get('/admin/navMenus',pageController.getAdminNavMenusPage)
     .get('/admin/passworDreset',pageController.getAdminPassworDresetPage)
+    .get('/admin/postAdd',pageController.getAdminPostAddPage)
+    .get('/admin/posts',pageController.getAdminPostsPage)
+    .get('/admin/profile',pageController.getAdminProfilePage)
+    .get('/admin/settings',pageController.getAdminSettingsPage)
+    .get('/admin/slides',pageController.getAdminSlidesPage)
+    .get('/admin/users',pageController.getAdminUsersPage)
 // 暴露
 module.exports = router;

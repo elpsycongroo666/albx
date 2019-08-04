@@ -38,12 +38,34 @@ function getAdminPassworDresetPage(req, res) {
     res.render('admin/password-reset.ejs');
 }
 
+function getAdminPostAddPage(req, res) {
+    res.render('admin/post-add.ejs');
+}
 
+function getAdminPostsPage(req, res) {
+    res.render('admin/posts.ejs');
+}
+
+function getAdminProfilePage(req, res) {
+    res.render('admin/profile.ejs');
+}
+
+function getAdminSettingsPage(req, res) {
+    res.render('admin/settings.ejs');
+}
+
+function getAdminSlidesPage(req, res) {
+    res.render('admin/slides.ejs');
+}
+
+function getAdminUsersPage(req,res){
+    res.render('admin/users.ejs');
+}
 
 
 // 暴露
 module.exports = {
     getIndexPage,getDetailPage,getLIstPage,
     getAdminCategoriesPage,getAdminCommentsPage,getAdminIndexPage,getAdminLoginPage,getAdminNavMenusPage,getAdminPassworDresetPage,
-    
+    getAdminPostAddPage,getAdminPostsPage,getAdminProfilePage,getAdminSettingsPage,getAdminSlidesPage,getAdminUsersPage
 }
