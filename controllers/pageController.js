@@ -1,4 +1,4 @@
-
+const queryString = require('querystring');
 // 获取前面的页面
 function getIndexPage(req,res){
     res.render('index.ejs');
@@ -23,9 +23,26 @@ function getAdminCommentsPage(req, res) {
 }
 
 function getAdminIndexPage(req, res) {
-    res.render('admin/index.ejs');
+    // 进行登录状态的验证
+//     var mycookie = queryString.parse(req.headers.cookie);//获得到的是字符串
+//     if(mycookie.isLogin && mycookie.isLogin == 'true'){
+//         res.render('admin/index.ejs');
+//     }else{
+//         // 重定向
+//         res.writeHead(301,{
+//             'location' : '/admin/login'
+//         })
+//         res.end();
+//     }
+    if(req.session.isLogin && req.session.isLogin == 'true'){
+        res.render('admin/index.ejs');
+    }else{
+        res.writeHead(301,{
+            'Location' : '/admin/login'
+        })
+        res.end();
+    }
 }
-
 function getAdminLoginPage(req, res) {
     res.render('admin/login.ejs');
 }
