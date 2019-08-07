@@ -9594,13 +9594,4 @@ if ( typeof define === "function" && define.amd && define.amd.jQuery ) {
 	define( "jquery", [], function () { return jQuery; } );
 }
 
-})( window );
-
-// nprogress
-$(document)
-	.ajaxStart(function () {
-		NProgress.start()
-	})
-	.ajaxStop(function () {
-		NProgress.done()
-	})
+})( window ); 
