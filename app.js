@@ -1,8 +1,10 @@
 const express = require('express');
-const app = express();
 const router = require('./router');
 const bodyParser = require('body-parser');
 const session = require('express-session');
+// 创建服务器
+const app = express();
+// 监听端口
 app.listen(8888, () => {
     console.log('http://127.0.0.1:8888');
 })
@@ -25,6 +27,7 @@ app.use(session(
         saveUninitialiazed: false //强制没有‘初始化’的session保存到storage中
     }
 ))
+
 app.use(function(req,res,next){
     // 三种场合不用登录
     // 1.登录页面
@@ -39,7 +42,7 @@ app.use(function(req,res,next){
 })
 // 设值渲染引擎
 app.set('view engine', 'ejs');
-app.set('views', __dirname + '/views')
+// app.set('views', __dirname + '/views')
 
 // 注册router中间件
 app.use(router);

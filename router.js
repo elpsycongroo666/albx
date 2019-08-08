@@ -4,6 +4,9 @@ const router = express.Router();
 const pageController = require('./controllers/pageController');
 // 处理业务逻辑的控制器
 const userController = require('./controllers/userController');
+const postController = require('./controllers/postController');
+const cateController = require('./controllers/cateController.js')
+
 
 router
     // 约定好获取前面页面的请求
@@ -26,5 +29,7 @@ router
 
     // 业务处理路由
     .post('/login',userController.login)
+    .get('/getAllPost',postController.getAllPost)
+    .get('/getAllCate',cateController.getAllCate)
 // 暴露
 module.exports = router;
