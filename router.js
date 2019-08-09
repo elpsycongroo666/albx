@@ -4,10 +4,14 @@ const router = express.Router();
 const pageController = require('./controllers/pageController');
 // 处理业务逻辑的控制器
 const userController = require('./controllers/userController');
+<<<<<<< HEAD
 const postController = require('./controllers/postController');
 const cateController = require('./controllers/cateController')
 const uploadController = require('./controllers/uploadController')
 
+=======
+const postsController = require('./controllers/postsController')
+>>>>>>> 033b6497ff8c3855b01994b04e83f4277b7037e3
 router
     // 约定好获取前面页面的请求
     .get('/', pageController.getIndexPage)
@@ -29,6 +33,7 @@ router
 
     // 业务处理路由
     .post('/login',userController.login)
+<<<<<<< HEAD
 
     .get('/getAllPost',postController.getAllPost)
 
@@ -38,5 +43,8 @@ router
     // 实现新增
     .post('/addPost',postController.addPost)
 
+=======
+    .get('/getAllPosts',postsController.getAllPosts)
+>>>>>>> 033b6497ff8c3855b01994b04e83f4277b7037e3
 // 暴露
 module.exports = router;

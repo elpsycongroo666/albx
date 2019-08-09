@@ -9594,4 +9594,8 @@ if ( typeof define === "function" && define.amd && define.amd.jQuery ) {
 	define( "jquery", [], function () { return jQuery; } );
 }
 
+<<<<<<< HEAD
 })( window );
+=======
+})( window ); 
+>>>>>>> 033b6497ff8c3855b01994b04e83f4277b7037e3

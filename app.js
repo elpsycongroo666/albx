@@ -28,6 +28,11 @@ app.use(session(
     }
 ))
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 033b6497ff8c3855b01994b04e83f4277b7037e3
 app.use(function(req,res,next){
     // 三种场合不用登录
     // 1.登录页面
@@ -40,6 +45,21 @@ app.use(function(req,res,next){
         res.redirect('/admin/login');
     }
 })
+
+// app.use(function(req,res,next){
+//     // 三种场合不用登录
+//     // 1.登录页面
+//     // 2.前面三个页面不用等登录
+//     // 3.有登录状态
+//     if(req.session.isLogin && req.session.isLogin == 'true' || req.url == '/admin/login' || req.url.indexOf('/admin') == -1){
+//         next();
+//     }else{
+//         // res.redirect() 实现重定向
+//         res.redirect('/admin/login');
+//     }
+// })
+
+
 // 设值渲染引擎
 app.set('view engine', 'ejs');
 // app.set('views', __dirname + '/views')
