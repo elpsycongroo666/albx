@@ -34,6 +34,7 @@ $(function () {
             currentPage: pageNum,//当前页码
             totalPages: total,//总页数
             onPageClicked: function (event, originalEvent, type, page) {
+                console.log(page);
                 // page就是你当前想获取数据的页码
                 // 修改全局 pageNum
                 pageNum = page
@@ -70,7 +71,5 @@ $(function () {
         // 发起ajax请求
         init(obj);
     })
-
-
 
 })

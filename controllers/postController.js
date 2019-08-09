@@ -1,5 +1,6 @@
 const postmodel = require('../models/postmodel')
 const moment = require('moment');
+// 获取所有文章数据列表
 function getAllPost(req,res){
     // 我们要获得pageSize 和 pageNum
     let obj = req.query;
@@ -23,7 +24,32 @@ function getAllPost(req,res){
     })
 }
 
+function addPost(req,res){
+    // 接收参数
+    let obj = req.body;
+    // 添加数据库所需要的三个字段的数据
+    // obj.id = null
+    obj.views = 0;
+    obj.likes = 0;
+    obj.user_id = req.session.currentUser.id
+    // 调用数据模块中的方法
+    postmodel.addPost(obj,(err)=>{
+        if(err){
+            console.log(err);
+            res.json({
+                code : 400,
+                msg : '新增失败'
+            })
+        }else{
+            res.json({
+                code : 200,
+                msg : '数据新增成功'
+            })
+        }
+    })
+}
+
 
 module.exports = {
-    getAllPost
+    getAllPost,addPost
 }
