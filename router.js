@@ -6,7 +6,7 @@ const pageController = require('./controllers/pageController');
 const userController = require('./controllers/userController');
 const postController = require('./controllers/postController');
 const cateController = require('./controllers/cateController.js')
-
+const uploadController = require('./controllers/uploadController')
 
 router
     // 约定好获取前面页面的请求
@@ -30,6 +30,12 @@ router
     // 业务处理路由
     .post('/login',userController.login)
     .get('/getAllPost',postController.getAllPost)
+
+
+
+
+    
     .get('/getAllCate',cateController.getAllCate)
+    .post('/uploadFile',uploadController.uploadFile)
 // 暴露
 module.exports = router;
