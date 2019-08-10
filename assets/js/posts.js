@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 $(function () {
     var pageNum = 1;
     var pageSize = 2;
@@ -34,6 +35,7 @@ $(function () {
             currentPage: pageNum,//当前页码
             totalPages: total,//总页数
             onPageClicked: function (event, originalEvent, type, page) {
+                console.log(page);
                 // page就是你当前想获取数据的页码
                 // 修改全局 pageNum
                 pageNum = page
@@ -71,6 +73,16 @@ $(function () {
         init(obj);
     })
 
-
-
+=======
+$(function(){
+    $.ajax({
+        url:'/getAllPosts',
+        type:'get',
+        success : function(res){
+            let html = template('getAllPosts',res);
+            console.log(res);
+            $('tbody').html(html);
+        }
+    })
+>>>>>>> 033b6497ff8c3855b01994b04e83f4277b7037e3
 })
